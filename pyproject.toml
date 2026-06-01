@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ejercicio_python"
+version = "0.1.0"
+description = "Ejemplo pequeño para pruebas unitarias"
+requires-python = ">=3.8"
+authors = [ { name = "Usuario" } ]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-q"
+testpaths = ["tests"]
+python_files = "test_*.py"
+
