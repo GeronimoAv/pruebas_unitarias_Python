@@ -11,10 +11,23 @@ from domain.model.E_PRESTAMO import E_PRESTAMO as E_PRESTAMO_RESULTADO
 
 #------------PRUEBA GREEN----------------
 def test_credit_approv():
-    p = Q_EVALUAR("Ana", 30, True, "Estudiante", 80) 
-    assert p.F_EVALUAR() == E_PRESTAMO_RESULTADO.APROBADO
+    # Arrange
+    applicant = Q_EVALUAR("Ana", 30, True, "Estudiante", 80)
+
+    # Act
+    resultado = applicant.F_EVALUAR()
+
+    # Assert
+    assert resultado == E_PRESTAMO_RESULTADO.APROBADO
+
 
 #------------PRUEBA RED----------------
 def test_loan_tipe():
-    p = Q_EVALUAR("Ana", 30, True, "Estudiante", 80) 
-    assert p.F_EVALUAR_TIPO_PRESTAMO() == E_PRESTAMO.R_PRESTAMO_DENEGADO
+    # Arrange
+    applicant = Q_EVALUAR("Ana", 30, True, "Estudiante", 80)
+
+    # Act
+    tipo = applicant.F_EVALUAR_TIPO_PRESTAMO()
+
+    # Assert
+    assert tipo == E_PRESTAMO.R_PRESTAMO_DENEGADO
