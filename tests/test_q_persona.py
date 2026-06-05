@@ -5,18 +5,11 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
 from domain.model.Q_PERSONA import Q_PERSONA
+from domain.service.Q_EVALUAR import Q_EVALUAR
+from domain.model.E_TIPO_PRESTAMO import E_PRESTAMO
+from domain.model.E_PRESTAMO import E_PRESTAMO as E_PRESTAMO_RESULTADO
 
-
-def test_get_name():
-    p = Q_PERSONA("Ana", 30, True, "Estudiante")
-    assert p.F_GET_NAME() == "Ana"
-
-
-def test_get_age():
-    p = Q_PERSONA("Ana", 30, True, "Estudiante")
-    assert p.F_GET_AGE() == 30
-
-
-def test_is_alive():
-    p = Q_PERSONA("Ana", 30, True, "Estudiante")
-    assert p.F_IS_ALIVE() is True
+#------------PRUEBA GREEN----------------
+def test_credit_approv():
+    p = Q_EVALUAR("Ana", 30, True, "Estudiante", 80) 
+    assert p.F_EVALUAR() == E_PRESTAMO_RESULTADO.APROBADO

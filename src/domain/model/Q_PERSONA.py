@@ -1,9 +1,10 @@
 class Q_PERSONA:
-    def __init__(V_PERSONA, name, age, alive, occupation):
+    def __init__(V_PERSONA, name, age, alive, occupation, V_PUNTAJE_C):
         V_PERSONA.name = name
         V_PERSONA.age = age
         V_PERSONA.alive = alive
         V_PERSONA.occupation = occupation
+        V_PERSONA.V_PUNTAJE_C = V_PUNTAJE_C
 
     def F_GET_NAME(V_PERSONA):
         return V_PERSONA.name
@@ -13,3 +14,9 @@ class Q_PERSONA:
 
     def F_IS_ALIVE(V_PERSONA):
         return V_PERSONA.alive
+    
+    def F_GET_OCCUPATION(V_PERSONA):
+        return V_PERSONA.occupation
+    
+    def F_GET_PUNTAJE_C(V_PERSONA):
+        return V_PERSONA.V_PUNTAJE_C
