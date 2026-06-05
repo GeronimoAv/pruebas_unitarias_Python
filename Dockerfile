@@ -22,5 +22,4 @@ COPY . .
 # Install package in editable mode including dev deps (pytest)
 RUN pip install -e .[dev]
 
-# Default: run tests
-CMD ["pytest", "-q"]
+CMD ["pytest", "-q", "--cov=src", "--cov-report=term-missing", "--cov-report=html:.", "--cov-fail-under=80"]

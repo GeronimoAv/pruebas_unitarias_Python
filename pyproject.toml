@@ -11,11 +11,11 @@ authors = [ { name = "Usuario" } ]
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest"]
+dev = ["pytest", "pytest-cov", "coverage"]
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "-q"
+addopts = "-q --cov=src --cov-report=term-missing"
 testpaths = ["tests"]
 python_files = "test_*.py"
 
