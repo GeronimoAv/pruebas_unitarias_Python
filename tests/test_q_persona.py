@@ -17,4 +17,4 @@ def test_credit_approv():
 #------------PRUEBA RED----------------
 def test_loan_tipe():
     p = Q_EVALUAR("Ana", 30, True, "Estudiante", 80) 
-    assert p.F_EVALUAR_TIPO_PRESTAMO() == E_PRESTAMO.R_PRESTAMO_ESPECIAL
+    assert p.F_EVALUAR_TIPO_PRESTAMO() == E_PRESTAMO.R_PRESTAMO_DENEGADO
