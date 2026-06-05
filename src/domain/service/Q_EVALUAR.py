@@ -11,6 +11,9 @@ class Q_EVALUAR(Q_PERSONA):
         else:
             return E_PRESTAMO.RECHAZADO
         
-
+    def F_EVALUAR_TIPO_PRESTAMO(self):
+        E_PRESTAMO_RESULTADO = self.F_EVALUAR()
+        if E_PRESTAMO_RESULTADO == E_PRESTAMO.APROBADO and 18 > self.age < 40:
+            return E_PRESTAMO.R_PRESTAMO_ESPECIAL
         
 

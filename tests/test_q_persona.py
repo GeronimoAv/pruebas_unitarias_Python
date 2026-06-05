@@ -13,3 +13,8 @@ from domain.model.E_PRESTAMO import E_PRESTAMO as E_PRESTAMO_RESULTADO
 def test_credit_approv():
     p = Q_EVALUAR("Ana", 30, True, "Estudiante", 80) 
     assert p.F_EVALUAR() == E_PRESTAMO_RESULTADO.APROBADO
+
+#------------PRUEBA RED----------------
+def test_loan_tipe():
+    p = Q_EVALUAR("Ana", 30, True, "Estudiante", 80) 
+    assert p.F_EVALUAR_TIPO_PRESTAMO() == E_PRESTAMO.R_PRESTAMO_ESPECIAL
