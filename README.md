@@ -8,6 +8,7 @@ Sadane Geronimo Miguel Santiago Acevedo Virgues
 
 ## estructura del proyecto
 
+``` text
 ├── Dockerfile
 ├── README.md
 ├── prubas
@@ -24,6 +25,7 @@ Sadane Geronimo Miguel Santiago Acevedo Virgues
 └── tests
     ├── domain
     └── test_q_persona.py
+```
 
 ## Indicaciones
 
